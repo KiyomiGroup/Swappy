@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Verified Agencies — Swappy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080C10;--surface:#0F1520;--surface2:#151D2B;--border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.12);--accent:#00E5A0;--accent2:#FF6B35;--text:#F0F4FF;--muted:#6B7FA3;--danger:#FF4D6D;--gold:#FFD166;--font:'Syne',sans-serif;--mono:'DM Mono',monospace}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--font);cursor:pointer}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;background:rgba(8,12,16,.94);backdrop-filter:blur(24px)}
+.nav-logo{font-size:26px;font-weight:800;letter-spacing:-.5px}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:14px;color:var(--muted);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-cta{background:var(--accent);color:#000;font-weight:700;font-size:13px;padding:10px 22px;border:none;border-radius:6px;cursor:pointer;text-decoration:none;display:inline-block}
+.main{max-width:1160px;margin:0 auto;padding:64px 48px 80px;flex:1;width:100%}
+.main h1{font-size:48px;font-weight:800;letter-spacing:-2px;margin-bottom:12px}
+.main .intro{font-size:16px;color:var(--muted);max-width:520px;margin-bottom:52px;line-height:1.7}
+.section-title{font-size:12px;font-family:var(--mono);color:var(--muted);letter-spacing:3px;text-transform:uppercase;margin-bottom:36px;display:flex;align-items:center;gap:16px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.ag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.ag-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .25s}
+.ag-card:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 20px 56px rgba(0,0,0,.4)}
+.ag-banner{height:100px;position:relative}
+.ag-avatar{width:64px;height:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;position:absolute;bottom:-32px;left:28px;z-index:2;border:2px solid rgba(255,255,255,.08)}
+.ag-body{padding:48px 28px 28px}
+.ag-body h2{font-size:20px;font-weight:700;margin-bottom:4px}
+.ag-loc{font-size:12px;color:var(--muted);font-family:var(--mono);margin-bottom:16px}
+.badge{font-family:var(--mono);font-size:9px;padding:3px 8px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;font-weight:500;border:1px solid;display:inline-block;margin-bottom:18px}
+.ag-stats{display:flex;gap:24px;margin-bottom:18px;flex-wrap:wrap}
+.ag-stat-n{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.ag-stat-l{font-size:11px;color:var(--muted);font-family:var(--mono);margin-top:2px}
+.ag-models{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.model-tag{background:var(--surface2);border:1px solid var(--border);font-size:10px;font-family:var(--mono);padding:3px 9px;border-radius:3px;color:var(--muted)}
+.ag-foot{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border)}
+.view-btn{background:var(--accent);color:#000;font-weight:700;font-size:13px;padding:10px 22px;border:none;border-radius:6px;transition:opacity .2s;cursor:pointer}
+.view-btn:hover{opacity:.85}
+.footer{border-top:1px solid var(--border);padding:24px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:1px}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.footer-links a:hover{color:var(--text)}
+@media(max-width:768px){.nav{padding:16px 20px}.nav-links{display:none}.main{padding:40px 20px 60px}.ag-grid{grid-template-columns:1fr}.footer{padding:20px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">swap<span>py</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="swap.html">Swap</a>
+    <a href="agencies.html" class="active">Agencies</a>
+  </div>
+  <a href="swap.html" class="nav-cta">Start Swap</a>
+</nav>
+<div class="main">
+  <h1>Verified Agencies</h1>
+  <p class="intro">All agencies on Swappy are vetted, rated by real customers, and held to strict quality standards before going live.</p>
+  <div class="section-title">Active on Swappy</div>
+  <div class="ag-grid" id="agGrid"></div>
+</div>
+<footer class="footer">
+  <div class="footer-copy">SWAPPY © 2026 — MVP BETA</div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="swap.html">Start Swap</a></div>
+</footer>
+<script>
+const AGENCIES=[{id:"a1",name:"SwapZone Nigeria",location:"Lagos, NG",rating:4.8,reviews:312,badge:"Top Dealer",color:"#00E5A0"},{id:"a2",name:"GadgetHub Africa",location:"Abuja, NG",rating:4.6,reviews:189,badge:"Verified",color:"#FF6B35"},{id:"a3",name:"TechSwap Pro",location:"Lagos, NG",rating:4.9,reviews:521,badge:"Premium",color:"#A78BFA"},{id:"a4",name:"PhoneXchange",location:"Port Harcourt, NG",rating:4.5,reviews:98,badge:"Verified",color:"#38BDF8"}];
+const LISTINGS=[{id:"l1",agencyId:"a1",model:"iPhone 16 Pro Max"},{id:"l2",agencyId:"a3",model:"iPhone 16 Pro Max"},{id:"l3",agencyId:"a2",model:"iPhone 16 Pro"},{id:"l4",agencyId:"a4",model:"iPhone 16 Pro"},{id:"l5",agencyId:"a1",model:"iPhone 16"},{id:"l6",agencyId:"a3",model:"iPhone 16"},{id:"l7",agencyId:"a1",model:"iPhone 15 Pro Max"},{id:"l8",agencyId:"a2",model:"iPhone 15 Pro"},{id:"l9",agencyId:"a3",model:"Galaxy S25 Ultra"},{id:"l10",agencyId:"a1",model:"Galaxy S25 Ultra"},{id:"l11",agencyId:"a4",model:"Galaxy S25+"},{id:"l12",agencyId:"a2",model:"Galaxy S25"},{id:"l13",agencyId:"a3",model:"Galaxy S24 Ultra"},{id:"l14",agencyId:"a1",model:"iPhone 14 Pro Max"},{id:"l15",agencyId:"a2",model:"iPhone 14 Pro"},{id:"l16",agencyId:"a4",model:"Galaxy Z Fold 6"}];
+function stars(r){return"★".repeat(Math.round(r))+"☆".repeat(5-Math.round(r))}
+const g=document.getElementById("agGrid");
+AGENCIES.forEach(a=>{
+  const ls=LISTINGS.filter(l=>l.agencyId===a.id);
+  const models=[...new Set(ls.map(l=>l.model))].slice(0,4);
+  g.innerHTML+=`<div class="ag-card">
+    <div class="ag-banner" style="background:linear-gradient(135deg,${a.color}22,${a.color}08)">
+      <div class="ag-avatar" style="background:${a.color}22;color:${a.color}">${a.name.charAt(0)}</div>
+    </div>
+    <div class="ag-body">
+      <h2>${a.name}</h2>
+      <div class="ag-loc">📍 ${a.location}</div>
+      <span class="badge" style="color:${a.color};border-color:${a.color}55;background:${a.color}18">${a.badge}</span>
+      <div class="ag-stats">
+        <div><div class="ag-stat-n" style="color:${a.color}">${stars(a.rating)}</div><div class="ag-stat-l">${a.rating} · ${a.reviews} reviews</div></div>
+        <div><div class="ag-stat-n">${ls.length}</div><div class="ag-stat-l">Listings</div></div>
+        <div><div class="ag-stat-n">24h</div><div class="ag-stat-l">Response</div></div>
+      </div>
+      <div class="ag-models">${models.map(m=>`<span class="model-tag">${m.replace("iPhone","").replace("Galaxy","").trim()}</span>`).join("")}${ls.length>4?`<span class="model-tag">+${ls.length-4} more</span>`:""}</div>
+      <div class="ag-foot">
+        <span style="font-size:12px;color:var(--muted);font-family:var(--mono)">${ls.length} active listings</span>
+        <a href="agency.html?id=${a.id}"><button class="view-btn">View Profile →</button></a>
+      </div>
+    </div>
+  </div>`;
+});
+</script>
+</body>
+</html>
